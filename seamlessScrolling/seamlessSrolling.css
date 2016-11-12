@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#div1 {
+    position: relative;
+    border: 1px solid black;
+    width: 850px;
+    height: 132px;
+    margin: 10px auto;
+    overflow: hidden;
+}
+
+#div1 ul {
+    position: absolute;
+    left: 0;
+}
+
+#div1 ul li {
+    list-style: none;
+    float: left;
+    width: 150px;
+    height: 112px;
+    padding: 10px;
+}
+
+#div1 ul li img {
+    width: 150px;
+}
