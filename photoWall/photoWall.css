@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#ul1 {
+    width: 660px;
+    position: relative;
+    margin: 10px auto;
+}
+
+#ul1 .active {
+    border: 1px dashed lightslategray;
+}
+
+#ul1 li {
+    width: 200px;
+    height: 150px;
+    float: left;
+    list-style: none;
+    margin: 10px;
+}
+
+img {
+    border: 0;
+    width: 200px;
+    height: 150px;
+}

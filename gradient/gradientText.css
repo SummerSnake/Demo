@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0
+}
+
+#ul1 {
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
+    margin: 10px auto;
+}
+
+#ul1 li {
+    list-style: none;
+    border-bottom: 1px dashed #999;
+    padding: 2px;
+    filter: alpha(opacity:0);
+    opacity: 0;
+    overflow: hidden;
+}
