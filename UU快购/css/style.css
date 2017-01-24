@@ -1,0 +1,683 @@
+.sign {
+    position: absolute;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    background-size: 100% 100%;
+}
+
+.banner {
+    width: 100%;
+    height: auto;
+}
+
+.banner img {
+    width: 100%;
+    height: 8.5rem;
+}
+
+.sign .wrap {
+    position: relative;
+    margin-top: .75rem;
+    height: 12rem;
+}
+
+.sign .signWall {
+    position: relative;
+    margin: 0 auto -1.4rem;
+    padding: .5rem 1.625rem;
+    width: 100%;
+    height: 12rem;
+    background: url(../images/signwall.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.sign .form-item {
+    position: relative;
+    right: .8rem;
+}
+
+.sign .form-item span {
+    display: block;
+    padding: .5rem 2.4rem 0 0;
+    text-align: right;
+    color: #999;
+    font-size: .5rem;
+}
+
+.sign .form-switch {
+    position: absolute;
+    top: 50%;
+    right: .227rem;
+    display: -webkit-box;
+    margin-top: -.363rem;
+    width: 2rem;
+    height: .77rem;
+    line-height: .77rem;
+    -webkit-box-align: center;
+}
+
+.sign .form-switch input {
+    position: absolute;
+    padding-left: 0;
+    width: 2rem;
+    height: .77rem;
+    outline: 0;
+    border: 0;
+    background: 0 0;
+    -webkit-appearance: none;
+}
+
+.sign .form-switch input:before {
+    position: absolute;
+    top: .05rem;
+    display: inline-block;
+    box-sizing: content-box;
+    width: 2rem;
+    height: .77rem;
+    border: 1px solid #dfdfdf;
+    border-radius: 20px;
+    background-color: #fdfdfd;
+    background-clip: content-box;
+    -webkit-background-clip: content-box;
+    box-shadow: #dfdfdf 0 0 0 0 inset;
+    content: "";
+    vertical-align: middle;
+    cursor: pointer;
+    transition: border .4s, box-shadow .4s;
+}
+
+.sign .form-switch input:after {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: .77rem;
+    height: .77rem;
+    border-radius: 100%;
+    background-color: #fff;
+    box-shadow: 0 .05rem .15rem rgba(0, 0, 0, .4);
+    content: "";
+    transition: left .2s;
+    -webkit-transition: left .2s;
+}
+
+.sign .form-switch input:checked:before {
+    border-color: #ff8b03;
+    background-color: #ff8b03;
+    box-shadow: #ff8b03 0 0 0 1pc inset;
+    transition: border .4s, box-shadow .4s, background-color 1.2s;
+}
+
+.sign .form-switch input:checked:after {
+    left: 1.27rem;
+}
+
+.signUser {
+    position: relative;
+    margin-top: .5rem;
+}
+
+.sign .signUser .userImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 42%;
+    border: none;
+    text-align: center;
+}
+
+.sign .signUser .userImg img {
+    width: 3.41rem;
+    height: 3.41rem;
+    vertical-align: middle;
+}
+
+.sign .signUser .userImgin {
+    overflow: hidden;
+    margin: 0 auto;
+    width: 3.43rem;
+    height: 3.43rem;
+    border-radius: 50%;
+    background: #f0f0f0;
+    text-align: center;
+}
+
+.sign .signUser .users {
+    position: absolute;
+    top: .25rem;
+    right: 0;
+    width: 58%;
+    border: none;
+}
+
+.sign .signUser p {
+    padding: .1rem 0;
+}
+
+.sign .signUser .phone {
+    color: #999;
+    font-size: .59rem;
+}
+
+.sign .signUser .phone span {
+    color: #444;
+    text-decoration: none;
+    font-size: .59rem;
+}
+
+.sign .signUser .number {
+    color: #ff8b03;
+    font-size: .59rem;
+}
+
+.sign .signUser .number i {
+    padding: 0 .15rem;
+    border-radius: 2px;
+    background: #ff8b03;
+    color: #fff;
+    letter-spacing: 2px;
+    font-style: normal;
+    font-size: .77rem;
+}
+
+.sign .signUser .tiper {
+    color: #999;
+    font-size: .59rem;
+}
+
+.sign .signWall .signBtn {
+    position: absolute;
+    bottom: 1.1rem;
+    width: 83%;
+}
+
+.sign .signWall .btn_s {
+    width: 100%;
+    text-align: center;
+}
+
+.sign .signWall .btn_s a {
+    margin: 0 auto;
+    padding: .35rem 3.5rem;
+    border-radius: 4px;
+    background: #ff8b03;
+    color: #fff;
+    font-size: .77rem;
+}
+
+.sign .signWall .btn_s button:active {
+    background: #ddd;
+    color: #999;
+}
+
+.sign .signWall .rules {
+    padding-top: .2rem;
+    text-align: center;
+}
+
+.sign .signWall .rules span {
+    padding: 0 .7rem;
+    background: url(../images/doubt.png) no-repeat left center;
+    background-size: .6rem .6rem;
+    color: #ff8b03;
+    font-size: .545rem;
+    cursor: pointer;
+}
+
+.sign .topAward {
+    margin-top: .6rem;
+}
+
+.sign .content .topAward h2 {
+    color: #444;
+    text-align: center;
+    font-size: .77rem;
+}
+
+.sign .content .topAward p {
+    width: 100%;
+    text-align: center;
+}
+
+.sign .content .topAward p span {
+    position: relative;
+    display: inline-block;
+    padding: .1rem .3rem .1rem 1.1rem;
+    border: 1px solid #d5d5d5;
+    border-radius: 4px;
+    color: #d5d5d5;
+    font-size: .545rem;
+}
+
+.sign .content .topAward p span img {
+    position: absolute;
+    top: .15rem;
+    left: 0;
+    margin: 0 .3rem;
+    width: .6rem;
+    height: .6rem;
+    vertical-align: middle;
+}
+
+.sign .listAll {
+    margin-top: .5rem;
+    position: relative;
+}
+
+.sign .listAll .line1 {
+    position: absolute;
+    top: 2.6rem;
+    left: 1.8rem;
+    width: .36rem;
+    height: 10rem;
+    background: url(../images/line.png) no-repeat;
+    background-size: .4rem 10rem;
+}
+
+.sign .listAll .line2 {
+    position: absolute;
+    top: 3.2rem;
+    left: 1.88rem;
+    display: none;
+    width: .15rem;
+    height: 0;
+    background: #ff8b03;
+    transition: height .5s;
+}
+
+.sign .content .list {
+    padding: 0 0.9rem;
+}
+
+.sign .content .list li {
+    position: relative;
+    margin: .82rem 0;
+}
+
+.sign .content .list .day {
+    position: absolute;
+    top: .5rem;
+    left: 0;
+    margin: 0 auto;
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    background: #f2f2f2;
+    text-align: center;
+}
+
+.sign .content .list .day span.limday {
+    border-color: #ff8b03;
+    color: #ff8b03;
+}
+
+.sign .content .list .day span {
+    display: inline-block;
+    margin: .3rem auto;
+    width: 1.6rem;
+    height: 1.6rem;
+    border: .2rem solid #e5e5e5;
+    border-radius: 50%;
+    background: #fff;
+    color: #e5e5e5;
+    vertical-align: middle;
+    text-align: center;
+    font-size: .6rem;
+    line-height: 1.2rem;
+}
+
+.sign .content .list .day span i {
+    display: inline-block;
+    font-size: .35rem;
+    font-style: normal;
+}
+
+.sign .content .list .cont {
+    margin-left: 20%;
+    padding: .5rem .1rem .5rem .3rem;
+    width: 80%;
+    background: url(../images/bg_signed.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.sign .content .list .cont .left {
+    float: left;
+    position: relative;
+    padding-top: .6rem;
+    width: 23%;
+    vertical-align: middle;
+}
+
+.sign .content .list .cont .right {
+    float: right;
+    width: 70%;
+}
+
+.sign i {
+    font-style: normal;
+}
+
+.sign .content .list .cont .left i:first-child {
+    margin-left: .4rem;
+    color: #ff8b03;
+    font-size: .56rem;
+}
+
+.sign .content .list .cont .left i:nth-child(2) {
+    color: #ff8b03;
+    font-size: 1.36rem;
+    line-height: 1.36rem;
+}
+
+.sign .content .list .cont .left i:nth-child(3) {
+    display: inline-block;
+    padding: .1rem;
+    width: .6rem;
+    border-radius: 2px;
+    background: #ff8b03;
+    color: #fff;
+    font-size: .4rem;
+    line-height: .5rem;
+}
+
+.sign .content .list .cont .left i {
+    display: inline-block;
+    margin: .05rem;
+    vertical-align: bottom;
+}
+
+.sign .content .list .cont .left img {
+    display: block;
+    width: 2.84rem;
+    height: 2.84rem;
+}
+
+.sign .content .list .cont .right p {
+    color: #999;
+    font-size: .5rem;
+}
+
+.sign .content .list .cont .right h3 {
+    padding-top: .4rem;
+    color: #323232;
+    font-weight: 600;
+    font-size: .64rem;
+}
+
+.sign .content .list .cont .right .sale {
+    float: left;
+    overflow: auto;
+    width: 52%;
+}
+
+.sign .content .list .cont .right .sale i.one {
+    padding-right: .2rem;
+    color: #ff8b03;
+    font-size: .7rem;
+}
+
+.sign .content .list .cont .right .sale i.two {
+    color: #bfbfbf;
+    text-decoration: line-through;
+    font-size: .5rem;
+}
+
+.sign .content .list .cont .right .coupon {
+    color: #444;
+    vertical-align: middle;
+    font-weight: 600;
+    font-size: .64rem;
+}
+
+.sign .content .list .cont .right .get {
+    float: right;
+    margin-top: .7rem;
+    width: 48%;
+}
+
+.sign .content .list .cont .right .get button {
+    float: right;
+    display: inline-block;
+    margin-right: .2rem;
+    height: 1.14rem;
+    border-radius: 3px;
+    background: #ff8b03;
+    color: #fff;
+    vertical-align: middle;
+    font-size: .52rem;
+    line-height: 1.14rem;
+}
+
+.sign .content .list .cont1 .right .get button {
+    margin-right: .3rem;
+}
+
+.sign .content .list .cont2 {
+    border: 1px solid #eee;
+    background: #fff;
+}
+
+.sign .content .list .cont2 .left {
+    position: relative;
+}
+
+.sign .content .list .cont2 .left i {
+    position: absolute;
+    top: 17px;
+    left: -20px;
+    width: 10px;
+    height: 10px;
+    border-bottom: 1px solid #ededed;
+    border-left: 1px solid #ededed;
+    background: #fff;
+    transform: rotate(45deg);
+}
+
+#mask {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+}
+
+#logIn {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 999;
+    margin-top: -3.5rem;
+    margin-left: -4.9rem;
+    width: 200px;
+    height: 5.91rem;
+}
+
+#logIn .suc {
+    position: relative;
+    text-align: center;
+    width: 200px;
+}
+
+#close {
+    position: absolute;
+    top: 15px;
+    right: -8px;
+    display: block;
+    padding: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background: #fff;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    cursor: pointer;
+    animation: close .5s linear;
+    -webkit-animation: close .5s linear;
+    animation-delay: .5s;
+    -webkit-animation-delay: .5s;
+}
+
+@keyframes close {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes close {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#close:hover {
+    color: #ff0000;
+}
+
+#logIn .suc .img1 {
+    margin-bottom: -1.4rem;
+    width: 7.23rem;
+    height: 2.5rem;
+    animation: img1 1s;
+    -webkit-animation: img1 1s;
+}
+
+@keyframes img1 {
+    0% {
+        transform: translateY(-50%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@-webkit-keyframes img1 {
+    0% {
+        transform: translateY(-50%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+#logIn .suc .wrapImg2 {
+    width: 9.95rem;
+    height: 6.11rem;
+    background: url(../images/bg_popup.png) no-repeat;
+    background-size: 9.95rem 6.11rem;
+}
+
+#logIn .suc .img2 {
+    margin-top: 2.3rem;
+    width: 7.14rem;
+    height: 2rem;
+    vertical-align: middle;
+    animation: img2 1s;
+    -webkit-animation: img2 1s;
+}
+
+@keyframes img2 {
+    0% {
+        transform: scale(0);
+    }
+    35% {
+        transform: scale(1.1);
+    }
+    70% {
+        transform: scale(.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@-webkit-keyframes img2 {
+    0% {
+        transform: scale(0);
+    }
+    35% {
+        transform: scale(1.1);
+    }
+    70% {
+        transform: scale(.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.sign .contentAct {
+    display: none;
+    position: absolute;
+    top: 12%;
+    left: 0;
+    z-index: 10;
+    overflow: auto;
+    width: 85%;
+    height: 12rem;
+    border-radius: 2px;
+    background: #fff;
+    color: #444;
+    font-size: .6rem;
+    animation: contentAct 1s;
+    -webkit-animation: contentAct 1s;
+}
+
+@keyframes contentAct {
+    0% {
+        transform: translateY(120%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@-webkit-keyframes contentAct {
+    0% {
+        transform: translateY(120%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.sign .contentAct h1 {
+    padding: .5rem;
+    border-bottom: 1px solid #eee;
+    color: #444;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.sign .contentAct p {
+    padding: .5rem;
+}
+
+.sign .contentAct .closeAct {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    padding: .35rem .5rem;
+    background: #f2f2f2;
+    color: #999;
+    font-size: 1rem;
+}
+
+.sign .contentAct .closeAct img {
+    width: 1rem;
+    height: 1rem;
+    vertical-align: middle;
+}

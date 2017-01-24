@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" data-dpr="1" style="font-size:20px;">
+<head>
+    <meta charset="UTF-8">
+    <!-- 优先使用 IE 最新版本和 Chrome -->
+    <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1"/>
+    <!-- 为移动设备添加 viewport -->
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,maximum-scale=3.0,minimum-scale=1.0,user-scalable=no"/>
+    <!-- iOS 设备适配代码Star-->
+    <!-- 添加到主屏后的标题（iOS 6 新增） -->
+    <meta name="apple-mobile-web-app-title" content="UU商城"/>
+    <!-- 是否启用 WebApp 全屏模式，删除苹果默认的工具栏和菜单栏 -->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <!-- 设置苹果工具栏颜色 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <!-- 添加智能 App 广告条 Smart App Banner（iOS 6+ Safari） -->
+    <meta name="apple-itunes-app" content="app-id=myAppStoreID,affiliate-data=myAffiliateData,app-argument=myURL"/>
+    <!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+    <meta name="format-detection" content="telephone=no"/>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <title>UU快购签到页</title>
+</head>
+<body>
+<div class="sign">
+    <header class="banner">
+        <img src="images/bannersign.jpg" alt=""/>
+    </header>
+    <div class="wrap">
+        <section class="signWall">
+            <div class="form-item">
+                <span>签到提醒</span>
+                <label class="form-switch"><input type="checkbox"></label>
+            </div>
+            <!-- 开关结束-->
+            <div class="signUser clearfix">
+                <div class="userImg">
+                    <div class="userImgin">
+                        <img src="images/signman.png" alt="">
+                    </div>
+                </div>
+                <div class="users">
+                    <p class="phone">Hi~&nbsp;<span>10086</span></p>
+                    <p class="number">本月签到 <i>00</i>天</p>
+                    <p class="tiper">每月1日开启新签到周期</p>
+                </div>
+            </div>
+            <!-- 签到内容结束-->
+            <div class="signBtn">
+                <div class="btn_s">
+                    <a href="javascript:;" id="sign">我要签到</a>
+                </div>
+                <p class="rules">
+                    <span id="activeItem">活动规则</span>
+                </p>
+            </div>
+            <!--签到按钮结束-->
+        </section>
+    </div>
+    <div class="content">
+        <div class="topAward">
+            <h2>签到领奖</h2>
+            <p>
+                <span id="signNum"><img src="images/rightgray.png" alt="">今天激活<em id="prizeN">0</em>个奖励</span>
+            </p>
+        </div>
+        <div class="listAll">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <ul class="list">
+                <li>
+                    <div class="day">
+                        <span>3<i>天</i></span>
+                    </div>
+                    <div class="cont cont1 clearfix">
+                        <div class="left">
+                            <i>¥</i><i>5</i><i>奖励</i>
+                        </div>
+                        <div class="right">
+                            <div class="sale">
+                                <p>UU快购新用户专享</p>
+                                <span class="coupon">跑腿代金券1张</span>
+                                <p>（仅限郑州)</p>
+                            </div>
+                            <div class="get">
+                                <button id="geted">点击领取</button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!-- 领取代金券结束-->
+                <li>
+                    <div class="day">
+                        <span>7<i>天</i></span>
+                    </div>
+                    <div class="cont cont2 clearfix">
+                        <div class="left">
+                            <i></i>
+                            <img src="images/img_shop.jpg" alt="">
+                        </div>
+                        <div class="right">
+                            <div class="sale">
+                                <h3>海鲜石锅拌饭</h3>
+                                <i class="one">¥12</i><i class="two">¥36</i>
+                            </div>
+                            <div class="get">
+                                <button>立即领取</button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="day">
+                        <span>15<i>天</i></span>
+                    </div>
+                    <div class="cont cont2 clearfix">
+                        <div class="left">
+                            <i></i>
+                            <img src="images/img_shop.jpg" alt="">
+                        </div>
+                        <div class="right">
+                            <div class="sale">
+                                <h3>海鲜石锅拌饭</h3>
+                                <i class="one">¥12</i><i class="two">¥36</i>
+                            </div>
+                            <div class="get">
+                                <button>立即领取</button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--弹窗-遮罩层-->
+    <div id="mask"></div>
+    <!--签到-->
+    <div id="logIn">
+        <div class="suc">
+            <span id="close">×</span>
+            <img src="images/yeah.png" alt="" class="img1">
+            <div class="wrapImg2">
+                <img src="images/suc_write.png" alt="" class="img2">
+            </div>
+        </div>
+    </div>
+    <!--活动规则-->
+    <div class="contentAct">
+        <span class="closeAct">
+            <img src="images/delete.png" alt="">
+        </span>
+        <h1>活动规则</h1>
+        <p> 有节骨乃坚，无心品自端。
+            几经狂风骤雨，宁折不易弯。
+            依旧四季翠绿，不与群芳争艳，扬首望青天，默默无闻处，萧瑟多昂然。
+        </p>
+    </div>
+</div>
+<!--page ed-->
+<script src="js/zepto.min.js"></script>
+<script src="js/UU.js"></script>
+</body>
+</html>

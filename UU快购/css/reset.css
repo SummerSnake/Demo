@@ -1,0 +1,92 @@
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    -ms-box-sizing: border-box;
+}
+
+a, abbr, acronym, address, applet, big, blockquote, body, caption, cite, code, dd, del, dfn, div, dl, dt, em, fieldset, form, h1, h2, h3, h4, h5, h6, html, iframe, img, ins, kbd, label, legend, li, object, ol, p, pre, q, s, samp, small, span, strike, strong, sub, sup, table, tbody, td, tfoot, th, thead, tr, tt, ul, var {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+
+body {
+    min-width: 20pc;
+    color: #000;
+    font-size: 20px;
+    font-family: Helvetica Neue, Helvetica, sans-serif;
+    -webkit-text-size-adjust: 100%;
+}
+
+fieldset, img {
+    border: none;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+ul:after, ul:before {
+    display: table;
+    content: "";
+}
+
+address, em {
+    font-style: normal;
+}
+
+a, button, img {
+    outline: 0;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+button, input, optgroup, option, select, textarea {
+    outline: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+a, button, img {
+    -webkit-appearance: none;
+}
+
+button {
+    border: 0;
+    background: 0 0;
+}
+
+a {
+    color: #321c07;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+input {
+    box-sizing: border-box;
+    padding: 10px 15px;
+    width: 100%;
+    height: 100%;
+    outline: 0;
+    border: none;
+    background: 0 0;
+    box-shadow: none;
+    font-size: .21875rem;
+    -webkit-appearance: none;
+}
+
+.clearfix:after {
+    clear: both;
+    display: block;
+    visibility: visible;
+    height: 0;
+    content: "\0020";
+}
+
+html {
+    font-size: 20px;
+}
