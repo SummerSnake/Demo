@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Seamless scrolling</title>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<div id="container">
+    <div id="list">
+        <ul>
+            <li><a href="javascript:;"><img src="images/1.jpg" alt=""></a></li>
+            <li><a href="javascript:;"><img src="images/2.jpg" alt=""></a></li>
+            <li><a href="javascript:;"><img src="images/3.jpg" alt=""></a></li>
+            <li><a href="javascript:;"><img src="images/4.jpg" alt=""></a></li>
+            <li><a href="javascript:;"><img src="images/5.jpg" alt=""></a></li>
+            <li><a href="javascript:;"><img src="images/6.jpg" alt=""></a></li>
+        </ul>
+    </div>
+    <a href="javascript:;" id="prev" class="arrow">&lt;</a>
+    <a href="javascript:;" id="next" class="arrow">&gt;</a>
+</div>
+</body>
+<script>
+    window.onload = function () {
+        var oList = document.getElementById("list");
+        var oUl = document.getElementsByTagName("ul")[0];
+        var aLi = document.getElementsByTagName("li");
+        var oPrev = document.getElementById("prev");
+        var oNext = document.getElementById("next");
+        var speed = -5;
+        var timer = null;
+        //复制Ul内容。
+        oUl.innerHTML += oUl.innerHTML;
+        //计算Ul长度。
+        oUl.style.width = aLi[0].offsetWidth * aLi.length + "px";
+        //无缝滚动。
+        function move() {
+            if (oUl.offsetLeft < -oUl.offsetWidth / 2) {//图片滚动到Ul长度一半，将图片拉回来。
+                oUl.style.left = 0;
+            }
+            if (oUl.offsetLeft > 0) {//反向滚动。
+                oUl.style.left = -oUl.offsetWidth / 2 + "px";
+            }
+            //滚动计算。
+            oUl.style.left = oUl.offsetLeft + speed + "px";
+        }
+
+        //自动播放。
+        timer = setInterval(move, 50);
+        //鼠标移入清除定时器。
+        oList.onmouseover = function () {
+            clearInterval(timer);
+        };
+        //鼠标移出设置定时器。
+        oList.onmouseout = function () {
+            timer = setInterval(move, 50);
+        };
+        //向左按钮。
+        oPrev.onclick = function () {
+            speed = -5;
+        };
+        //向右按钮。
+        oNext.onclick = function () {
+            speed = 5;
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        a, body, div, img, span {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            padding: 20px;
+        }
+
+        #container {
+            position: relative;
+            width: 480px;
+            height: 300px;
+            border: 3px solid #333;
+            overflow: hidden;
+        }
+
+        #list {
+            position: absolute;
+            z-index: 1;
+            width: 3840px;
+            height: 400px;
+        }
+
+        #list img {
+            float: left;
+            width: 480px;
+            height: 300px;
+        }
+
+        #buttons {
+            position: absolute;
+            left: 170px;
+            bottom: 10px;
+            z-index: 2;
+            height: 10px;
+            width: 120px;
+        }
+
+        #buttons span {
+            float: left;
+            margin-right: 5px;
+            width: 10px;
+            height: 10px;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            background: #ccc;
+            cursor: pointer;
+        }
+
+        #buttons .on {
+            background: #ffa500;
+        }
+
+        .arrow {
+            display: none;
+            position: absolute;
+            text-decoration: none;
+            top: 130px;
+            z-index: 2;
+            width: 40px;
+            height: 40px;
+            font-size: 50px;
+            font-weight: bold;
+            line-height: 39px;
+            text-align: center;
+            color: #ccc;
+            background-color: rgba(0, 0, 0, .3);
+            cursor: pointer;
+        }
+
+        .arrow:hover {
+            background-color: rgba(0, 0, 0, .7);
+        }
+
+        #container:hover .arrow {
+            display: block;
+        }
+
+        #prev {
+            left: 5px;
+        }
+
+        #next {
+            right: 5px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>Carousel</title>
+</head>
+<body>
+<div id="container">
+    <div id="list" style="left:0;">
+        <img src="images/1.jpg" alt="1">
+        <img src="images/2.jpg" alt="2">
+        <img src="images/3.jpg" alt="3">
+        <img src="images/4.jpg" alt="4">
+        <img src="images/5.jpg" alt="5">
+        <img src="images/6.jpg" alt="6">
+    </div>
+    <div id="buttons">
+        <span index="1" class="on"></span>
+        <span index="2"></span>
+        <span index="3"></span>
+        <span index="4"></span>
+        <span index="5"></span>
+        <span index="6"></span>
+    </div>
+    <a href="javascript:;" id="prev" class="arrow">&lt;</a>
+    <a href="javascript:;" id="next" class="arrow">&gt;</a>
+</div>
+</body>
+<script>
+    window.onload = function () {
+        var oContainer = document.getElementById("container");
+        var oList = document.getElementById("list");
+        var aButtons = document.getElementById("buttons").getElementsByTagName("span");
+        var oPrev = document.getElementById("prev");
+        var oNext = document.getElementById("next");
+        var index = 1;
+        var timer;
+        //轮播。
+        function animate(imageWidth) {
+            //获取的是style.left，是相对左边获取距离，所以第一张图后style.left都为负值，
+            //且style.left获取的是字符串，需要用parseInt()取整转化为数字。
+            var newLeft = parseInt(oList.style.left) + imageWidth;
+            oList.style.left = newLeft + "px";
+            //无限滚动判断
+            if (newLeft > 0) {
+                oList.style.left = -2400 + "px";
+            }
+            if (newLeft < -2400) {
+                oList.style.left = 0;
+            }
+        }
+        //重复执行的定时器。
+        function play() {
+            timer = setInterval(function () {
+                oNext.onclick();
+            }, 2000);
+        }
+        //清除定时器。
+        function stop() {
+            clearInterval(timer);
+        }
+        //圆点控制按钮样式。
+        function buttonShow() {
+            //将之前的小圆点的样式清除
+            for (var i = 0, len = aButtons.length; i < len; i++) {
+                if (aButtons[i].className == "on") {
+                    aButtons[i].className = "";
+                }
+            }
+            //数组从0开始，故index需要-1
+            aButtons[index - 1].className = "on";
+        }
+        //后退按钮。
+        oPrev.onclick = function () {
+            index -= 1;
+            if (index < 1) {
+                index = 6;
+            }
+            buttonShow();
+            animate(480);
+        };
+        //前进按钮。
+        oNext.onclick = function () {
+            //由于上边定时器的作用，index会一直递增下去，我们只有6个小圆点，所以需要做出判断。
+            index += 1;
+            if (index > 6) {
+                index = 1;
+            }
+            buttonShow();
+            animate(-480);
+        };
+        //按钮匹配图片。
+        for (var i = 0, len = aButtons.length; i < len; i++) {
+            (function (i) {
+                aButtons[i].onclick = function () {
+                    //这里获得鼠标移动到小圆点的位置，用this把index绑定到对象aButtons[i]上，
+                    //由于这里的index是自定义属性，需要用到getAttribute()这个DOM2级方法，去获取自定义index的属性。
+                    var clickIndex = parseInt(this.getAttribute("index"));
+                    var imageWidth = 480 * (index - clickIndex);//这个index是当前图片停留时的index。
+                    animate(imageWidth);
+                    index = clickIndex;//存放鼠标点击后的位置，用于小圆点的正常显示。
+                    buttonShow();
+                }
+            })(i);
+        }
+        oContainer.onmouseover = stop;
+        oContainer.onmouseout = play;
+        play();
+    }
+</script>
+</html>
