@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        div {
+            margin: 40px;
+            float: left;
+        }
+
+        /*爱心*/
+        .heart {
+            position: relative;
+            width: 100px;
+            height: 100px;
+        }
+
+        .heart:before, .heart:after {
+            content: "";
+            width: 60px;
+            height: 100px;
+            background: #DB7093;
+            border-radius: 40px 40px 0 0;
+            position: absolute;
+            left: 0;
+            transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+        }
+
+        .heart:after {
+            left: 30px;
+            transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+        }
+
+        /*三角形*/
+        .triangle {
+            border: 50px solid transparent;
+            border-top: 10px solid transparent;
+            border-bottom: 90px solid #2aabd2;
+        }
+
+        /*平行四边形*/
+        .parallelogram {
+            width: 100px;
+            height: 100px;
+            background: #00dc50;
+            transform: skew(45deg);
+            -moz-transform: skew(45deg);
+            -webkit-transform: skew(45deg);
+        }
+
+        /*梯形*/
+        .trapezoid {
+            width: 100px;
+            height: 100px;
+            box-sizing: border-box;
+            border: 30px solid transparent;
+            border-top: 40px solid transparent;
+            border-bottom: 60px solid #000080;
+        }
+
+        /*五角星*/
+        .star {
+            position: relative;
+            display: block;
+            top: 15px;
+            border-right: 100px solid transparent;
+            border-bottom: 70px solid cadetblue;
+            border-left: 100px solid transparent;
+            -moz-transform: rotate(35deg);
+            -webkit-transform: rotate(35deg);
+            -ms-transform: rotate(35deg);
+        }
+
+        .star:before {
+            position: absolute;
+            display: block;
+            top: -45px;
+            left: -62px;
+            border-bottom: 80px solid cadetblue;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+            content: '';
+            -webkit-transform: rotate(-35deg);
+            -moz-transform: rotate(-35deg);
+            -ms-transform: rotate(-35deg);
+            -o-transform: rotate(-35deg);
+        }
+
+        .star:after {
+            content: '';
+            position: absolute;
+            display: block;
+            top: 3px;
+            left: -105px;
+            color: #fc2e5a;
+            border-right: 100px solid transparent;
+            border-bottom: 70px solid cadetblue;
+            border-left: 100px solid transparent;
+            -webkit-transform: rotate(-70deg);
+            -moz-transform: rotate(-70deg);
+            -ms-transform: rotate(-70deg);
+            -o-transform: rotate(-70deg);
+        }
+
+        /*飞机*/
+        .plan {
+            position: relative;
+            border-top: 100px solid transparent;
+            border-bottom: 40px solid transparent;
+            border-left: 30px solid #800080;
+            transform: rotate(70deg);
+        }
+
+        .plan:before, .plan:after {
+            content: '';
+            display: block;
+            position: absolute;
+            border-top: 100px solid transparent;
+            border-left: 40px solid #800080;
+            border-right: 80px solid transparent;
+            top: -121px;
+            left: -16px;
+            transform: rotate(-20deg);
+        }
+
+        .plan:after {
+            border-top: 20px solid #800080;
+            border-left: 7px solid transparent;
+            border-right: 7px solid transparent;
+            top: -4px;
+            left: 1px;
+            transform: rotate(-40deg);
+        }
+
+        /*聊天框*/
+        .chart {
+            width: 200px;
+            height: 100px;
+            background: #b4bbbf;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .chart:after {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 200px;
+            top: calc(50% - 15px);
+            border: 15px solid transparent;
+            border-left: 15px solid #b4bbbf;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>cssShape</title>
+</head>
+<body>
+<div class="heart"></div>
+<div class="triangle"></div>
+<div class="parallelogram"></div>
+<div class="trapezoid"></div>
+<div class="star"></div>
+<div class="plan"></div>
+<div class="chart"></div>
+</body>
+</html>
