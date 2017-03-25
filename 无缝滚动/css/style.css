@@ -1,4 +1,4 @@
-a, body, div, ul, li, img {
+body, div, ul, li, img {
     margin: 0;
     padding: 0;
 }
@@ -7,63 +7,38 @@ ul, li {
     list-style: none;
 }
 
-#container {
-    width: 960px;
-    margin: 50px auto 0;
-    position: relative;
-    overflow: hidden;
+.wrap {
+    max-width: 960px;
+    width: 90%;
+    margin: 20px auto;
     border: 1px solid #ccc;
+    box-sizing: border-box;
 }
 
-#list {
-    width: 960px;
-    height: 300px;
-    position: relative;
+.items {
     overflow: hidden;
-    z-index: 1;
+    white-space: nowrap;
 }
 
-ul {
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-
-li {
-    float: left;
+.item {
+    display: inline-block;
     width: 480px;
-    height: 300px;
-}
-
-.arrow {
-    display: none;
-    position: absolute;
-    text-decoration: none;
-    top: 130px;
-    z-index: 2;
-    width: 40px;
-    height: 40px;
-    font-size: 50px;
-    font-weight: bold;
-    line-height: 39px;
     text-align: center;
-    color: #ccc;
-    background-color: rgba(0, 0, 0, .3);
-    cursor: pointer;
 }
 
-.arrow:hover {
-    background-color: rgba(0, 0, 0, .7);
+.items img {
+    width: 90%;
+    border:0;
 }
 
-#container:hover .arrow {
-    display: block;
+@media (max-width: 780px) {
+    .item {
+        width: 190px;
+    }
 }
 
-#prev {
-    left: 5px;
-}
-
-#next {
-    right: 5px;
+@media (max-width: 580px) {
+    .item {
+        width: 160px;
+    }
 }
