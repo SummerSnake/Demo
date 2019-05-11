@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .inputWrap {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .inputWrap > label {
+            position: absolute;
+            top: 14px;
+            left: 7px;
+            padding: 0 5px;
+            -webkit-transition: top 0.5s, font-size 0.3s;
+            -moz-transition: top 0.5s, font-size 0.3s;
+            -ms-transition: top 0.5s, font-size 0.3s;
+            -o-transition: top 0.5s, font-size 0.3s;
+            transition: top 0.5s, font-size 0.3s;
+        }
+
+        .inputWrap > input {
+            height: 45px;
+            padding: 0 12px;
+        }
+
+        .inputWrap > input:hover + label,
+        .inputWrap > input:focus + label,
+        .inputWrap > input:valid + label {
+            top: -9px;
+            font-size: 12px;
+        }
+
+        label {
+            color: #000;
+            background: #fff;
+        }
+
+        input {
+            color: #000;
+            border: 2px solid #289afa;
+            background: #fff;
+            width: 240px;
+            outline: 0;
+        }
+
+    </style>
+    <meta charset="UTF-8">
+    <title>CSS组件之文本输入框(input text)样式</title>
+</head>
+<body>
+<div>
+    <div class="inputWrap">
+        <input type="text" id="username" required>
+        <label for="username">用户名</label>
+    </div>
+    <div class="inputWrap">
+        <input type="text" id="password" required>
+        <label for="password">密码</label>
+    </div>
+</div>
+</body>
+</html>
