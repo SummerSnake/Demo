@@ -1,0 +1,351 @@
+body, p, img, h1, h2, h3, h4 {
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'MicrosoftYaHei';
+}
+
+body {
+    font-family: arial, sans-serif;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background: #e8e8e8;
+}
+
+/* swiper 头部轮播图*/
+.swiperContianer_01 {
+    width: 100%;
+    height: 3.18rem;
+}
+
+.swiperContianer_01 .swiper-slide {
+    width: 100%;
+}
+
+.swiperContianer_01 .swiper-slide > img {
+    width: 100%;
+    height: 100%;
+}
+
+/* 视频卡片区域 */
+.videoCardWrap {
+    width: 100%;
+    margin-top: 0.24rem;
+    background-color: #fff;
+}
+
+/* 视频卡片区域 -- 选项卡 */
+.videoCardTab {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 0.2rem;
+}
+
+.videoCardTab > p {
+    position: relative;
+    flex: 1;
+    padding: 0.4rem 0 0.18rem;
+    color: #757474;
+    font-size: 0.24rem;
+    text-align: center;
+    border-bottom: 1px solid #c1c1c1;
+}
+
+.videoCardTab > p.active {
+    color: #ffae40;
+    border-bottom: 1px solid #ffae40;
+}
+
+.videoCardTab > p:first-child::after {
+    position: absolute;
+    top: 0.22rem;
+    right: 0;
+    content: '';
+    width: 1px;
+    height: 0.44rem;
+    background-color: #c1c1c1;
+}
+
+/* 视频卡片区域 -- 标签轮播 */
+.swiperContianer_02 {
+    width: 100%;
+    height: 1.36rem;
+}
+
+.swiperContianer_02 .swiper-wrapper {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 0.3rem;
+}
+
+.swiperContianer_02 .swiper-wrapper .swiper-slide {
+    max-width: 1.16rem;
+    height: 0.48rem;
+    line-height: 0.48rem;
+    margin-right: 0.2rem;
+    color: #fff;
+    font-size: 0.24rem;
+    text-align: center;
+    letter-spacing: 2px;
+    background-color: #c1c1c1;
+    border-radius: 12px;
+}
+
+.swiperContianer_02 .swiper-wrapper .swiper-slide:last-child {
+    margin-right: 0;
+}
+
+.swiperContianer_02 .swiper-wrapper .swiper-slide.current {
+    background-color: #f63246; /* 不支持线性的时候显示 */
+    background-image: linear-gradient(to right, #f63246, #ff894a);
+}
+
+/* 视频卡片区域 -- 卡片轮播 */
+.videoCard {
+    padding: 0 0.3rem;
+}
+
+.titleDom {
+    position: relative;
+    height: 1.04rem;
+    line-height: 1.04rem;
+    padding-left: 0.3rem;
+    color: #303030;
+    font-size: 0.28rem;
+    letter-spacing: 1px;
+}
+
+.titleDom::before {
+    position: absolute;
+    top: 0.34rem;
+    left: 0;
+    content: '';
+    width: 0.1rem;
+    height: 0.32rem;
+    background-color: #fe8050;
+}
+
+.videoCardSwiper .swiper-slide {
+    max-width: 3.1rem;
+    box-sizing: border-box;
+    padding: 0.2rem;
+    margin-right: 0.16rem;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+}
+
+.videoCardSwiper .swiper-slide:last-child {
+    margin-right: 0;
+}
+
+.videoCardSwiper .swiper-slide .videoCardImg {
+    width: 2.7rem;
+    height: 1.62rem;
+    box-sizing: border-box;
+    padding: 0.1rem;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.videoCardSwiper .swiper-slide .videoCardImg > img {
+    width: 100%;
+    height: 100%;
+}
+
+.videoCardSwiper .swiper-slide .videoCardTxt {
+    padding: 0 0.1rem;
+}
+
+.videoCardSwiper .swiper-slide .videoCardTxt > h4 {
+    color: #303030;
+    font-size: 0.24rem;
+    padding: 0.22rem 0;
+}
+
+.videoCardSwiper .swiper-slide .videoCardTxt > p:nth-of-type(1) {
+    color: #303030;
+    font-size: 0.2rem;
+    padding-bottom: 0.24rem;
+}
+
+.videoCardSwiper .swiper-slide .videoCardTxt .memPrice {
+    position: relative;
+    color: #303030;
+    font-size: 0.2rem;
+    padding-bottom: 0.20rem;
+}
+
+.videoCardSwiper .swiper-slide .videoCardTxt .memPrice > span:first-child {
+    color: #ff6f6d;
+    font-size: 0.24rem;
+}
+
+.videoCardSwiper .swiper-slide .videoCardTxt .memPrice > span:last-child {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0.6rem;
+    height: 0.34rem;
+    line-height: 0.34rem;
+    color: #d85350;
+    font-size: 0.16rem;
+    text-align: center;
+    background-color: #edd5a0;
+    border-top-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.videoCardSwiper .swiper-slide .videoCardTxt > p:last-child {
+    width: 2.52rem;
+    height: 0.46rem;
+    line-height: 0.46rem;
+    margin: 0 auto;
+    color: #fff;
+    font-size: 0.24rem;
+    text-align: center;
+    background-color: #ff6d6a;
+    border-radius: 12px;
+}
+
+/* 红包区域 */
+.redPackWrap {
+    padding: 0 0.3rem;
+    background-color: #fff;
+}
+
+.redPackWrap .redPackImgWrap {
+    width: 100%;
+    height: 1.9rem;
+    margin-bottom: 0.18rem;
+}
+
+.redPackWrap .redPackImgWrap > img {
+    width: 100%;
+    height: 100%;
+}
+
+.redPackWrap .redPackImgWrap:last-child {
+    margin-bottom: 0;
+}
+
+/* 安全出行区域 */
+.safeTripWrap {
+    padding: 0 0.3rem;
+    background-color: #fff;
+}
+
+.safeTripWrap::after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.safeTripWrap .safeTripImgWrap {
+    float: left;
+    width: 3.37rem;
+    height: 1.44rem;
+    margin-bottom: 0.14rem;
+}
+
+.safeTripWrap .safeTripImgWrap > img {
+    width: 100%;
+    height: 100%;
+}
+
+.safeTripWrap .safeTripImgWrap:nth-of-type(3) {
+    margin-bottom: 0;
+}
+
+.safeTripWrap .safeTripImgWrap:nth-of-type(4) {
+    margin-bottom: 0;
+}
+
+.safeTripWrap .safeTripImgWrap:nth-of-type(odd) {
+    margin-right: 0.16rem;
+}
+
+/* 超惠生活区域 */
+.liveWrap {
+    padding: 0 0.3rem;
+    background-color: #fff;
+}
+
+.liveWrap::after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.liveWrap .liveImgWrap {
+    float: left;
+    width: 2.18rem;
+    height: 1.84rem;
+    margin-right: 0.18rem;
+    margin-bottom: 0.18rem;
+}
+
+.liveWrap .liveImgWrap > img {
+    width: 100%;
+    height: 100%;
+}
+
+.liveWrap .liveImgWrap:nth-of-type(3) {
+    margin-right: 0;
+}
+
+.liveWrap .liveImgWrap:nth-of-type(4) {
+    margin-bottom: 0;
+}
+
+.liveWrap .liveImgWrap:nth-of-type(5) {
+    margin-bottom: 0;
+}
+
+.liveWrap .liveImgWrap:nth-of-type(6) {
+    margin-right: 0;
+    margin-bottom: 0;
+}
+
+/* 限时秒杀区域 */
+.flashSaleWrap {
+    padding: 0 0.3rem;
+    background-color: #fff;
+}
+
+.flashSaleWrap::after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.flashSaleWrap .flashSaleImgWrap {
+    float: left;
+    width: 2.18rem;
+    height: 3.22rem;
+    margin-right: 0.18rem;
+    margin-bottom: 0.18rem;
+}
+
+.flashSaleWrap .flashSaleImgWrap > img {
+    width: 100%;
+    height: 100%;
+}
+
+.flashSaleWrap .flashSaleImgWrap:nth-of-type(3) {
+    margin-right: 0;
+}

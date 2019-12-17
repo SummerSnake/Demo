@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>移动端页面Demo</title>
+  <link rel="stylesheet" href="../static/css/member.css">
+  <link href="../static/css/swiper.min.css" rel="stylesheet" type="text/css">
+  <script src="../static/js/swiper.min.js"></script>
+</head>
+<body>
+<div class="main">
+
+  <!--  头部轮播图  -->
+  <div class="swiper-container swiperContianer_01">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="../static/images/swiper_01.jpg" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="../static/images/swiper_01.jpg" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="../static/images/swiper_01.jpg" alt="">
+      </div>
+    </div>
+  </div>
+
+  <!--  视频卡区域  -->
+  <div class="videoCardWrap">
+    <!--  tab 选项卡  -->
+    <div class="videoCardTab" onclick="handleTabActive()">
+      <p class="active">权益汇</p>
+      <p>个人中心</p>
+    </div>
+
+    <!--  标签  -->
+    <div class="swiper-container swiperContianer_02">
+      <div class="swiper-wrapper" onclick="handleTagActive()">
+        <div class="swiper-slide current">精选</div>
+        <div class="swiper-slide">视频</div>
+        <div class="swiper-slide">音乐</div>
+        <div class="swiper-slide">读书</div>
+        <div class="swiper-slide">生活</div>
+        <div class="swiper-slide">生活</div>
+      </div>
+    </div>
+
+    <!--  视频卡  -->
+    <div class="videoCard">
+      <h3 class="titleDom">爱奇艺视频</h3>
+      <div class="swiper-container videoCardSwiper swiperContianer_03">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" onclick="">
+            <div class="videoCardImg">
+              <img src="../static/images/videoCard_01.png" alt="">
+            </div>
+            <div class="videoCardTxt">
+              <h4>爱奇艺会员周卡</h4>
+              <p>
+                <del>原价10元</del>
+              </p>
+              <p class="memPrice">尊享价<span>5</span>元<span>省5元</span></p>
+              <p>加入会员</p>
+            </div>
+          </div>
+          <div class="swiper-slide" onclick="">
+            <div class="videoCardImg">
+              <img src="../static/images/videoCard_01.png" alt="">
+            </div>
+            <div class="videoCardTxt">
+              <h4>爱奇艺会员周卡</h4>
+              <p>
+                <del>原价10元</del>
+              </p>
+              <p class="memPrice">尊享价<span>5</span>元<span>省5元</span></p>
+              <p>加入会员</p>
+            </div>
+          </div>
+          <div class="swiper-slide" onclick="">
+            <div class="videoCardImg">
+              <img src="../static/images/videoCard_01.png" alt="">
+            </div>
+            <div class="videoCardTxt">
+              <h4>爱奇艺会员周卡</h4>
+              <p>
+                <del>原价10元</del>
+              </p>
+              <p class="memPrice">尊享价<span>5</span>元<span>省5元</span></p>
+              <p>加入会员</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="videoCard">
+      <h3 class="titleDom">优酷视频</h3>
+      <div class="swiper-container videoCardSwiper swiperContianer_04">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" onclick="">
+            <div class="videoCardImg">
+              <img src="../static/images/videoCard_02.png" alt="">
+            </div>
+            <div class="videoCardTxt">
+              <h4>优酷会员周卡</h4>
+              <p>
+                <del>原价10元</del>
+              </p>
+              <p class="memPrice">尊享价<span>5</span>元<span>省5元</span></p>
+              <p>加入会员</p>
+            </div>
+          </div>
+          <div class="swiper-slide" onclick="">
+            <div class="videoCardImg">
+              <img src="../static/images/videoCard_02.png" alt="">
+            </div>
+            <div class="videoCardTxt">
+              <h4>优酷会员周卡</h4>
+              <p>
+                <del>原价10元</del>
+              </p>
+              <p class="memPrice">尊享价<span>5</span>元<span>省5元</span></p>
+              <p>加入会员</p>
+            </div>
+          </div>
+          <div class="swiper-slide" onclick="">
+            <div class="videoCardImg">
+              <img src="../static/images/videoCard_02.png" alt="">
+            </div>
+            <div class="videoCardTxt">
+              <h4>优酷会员周卡</h4>
+              <p>
+                <del>原价10元</del>
+              </p>
+              <p class="memPrice">尊享价<span>5</span>元<span>省5元</span></p>
+              <p>加入会员</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--  红包区域  -->
+    <div class="redPackWrap">
+      <h3 class="titleDom">现金红包</h3>
+      <div class="redPackImgWrap">
+        <img src="../static/images/redPack_01.png" alt="">
+      </div>
+      <div class="redPackImgWrap">
+        <img src="../static/images/redPack_01.png" alt="">
+      </div>
+      <div class="redPackImgWrap">
+        <img src="../static/images/redPack_01.png" alt="">
+      </div>
+    </div>
+
+    <!--  安全出行区域  -->
+    <div class="safeTripWrap">
+      <h3 class="titleDom">安全出行</h3>
+      <div class="safeTripImgWrap">
+        <img src="../static/images/safeTrip_01.png" alt="">
+      </div>
+      <div class="safeTripImgWrap">
+        <img src="../static/images/safeTrip_01.png" alt="">
+      </div>
+      <div class="safeTripImgWrap">
+        <img src="../static/images/safeTrip_01.png" alt="">
+      </div>
+      <div class="safeTripImgWrap">
+        <img src="../static/images/safeTrip_01.png" alt="">
+      </div>
+    </div>
+
+    <!--  超惠生活区域  -->
+    <div class="liveWrap">
+      <h3 class="titleDom">超惠生活</h3>
+      <div class="liveImgWrap">
+        <img src="../static/images/live_01.png" alt="">
+      </div>
+      <div class="liveImgWrap">
+        <img src="../static/images/live_01.png" alt="">
+      </div>
+      <div class="liveImgWrap">
+        <img src="../static/images/live_01.png" alt="">
+      </div>
+      <div class="liveImgWrap">
+        <img src="../static/images/live_01.png" alt="">
+      </div>
+      <div class="liveImgWrap">
+        <img src="../static/images/live_01.png" alt="">
+      </div>
+      <div class="liveImgWrap">
+        <img src="../static/images/live_01.png" alt="">
+      </div>
+    </div>
+
+    <!--  限时秒杀区域  -->
+    <div class="flashSaleWrap">
+      <h3 class="titleDom">限时秒杀</h3>
+      <div class="flashSaleImgWrap">
+        <img src="../static/images/flashSale_01.png" alt="">
+      </div>
+      <div class="flashSaleImgWrap">
+        <img src="../static/images/flashSale_01.png" alt="">
+      </div>
+      <div class="flashSaleImgWrap">
+        <img src="../static/images/flashSale_01.png" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // 这个7.5是设计稿的宽度除以100得到的(如果以iphone5设计图为基准，7.5 => 6.4)
+  document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+</script>
+<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+  /**
+   * @desc 头部轮播图
+   */
+  var swiperOne = new Swiper('.swiperContianer_01');
+
+  /**
+   * @desc 视频卡区域 标签轮播
+   */
+  var swiperTwo = new Swiper('.swiperContianer_02', {
+    slidesPerView: 5,
+  });
+
+  /**
+   * @desc 视频卡区域 卡片轮播
+   */
+  var swiperThree = new Swiper('.swiperContianer_03', {
+    slidesPerView: 2,
+  });
+
+  /**
+   * @desc 视频卡区域 卡片轮播
+   */
+  var swiperFour = new Swiper('.swiperContianer_04', {
+    slidesPerView: 2,
+  });
+
+  /**
+   * @desc 视频卡区域 tab 点击事件
+   */
+  function handleTabActive() {
+    $(document).on('click', '.videoCardTab > p', function () {
+      $(this).addClass('active').siblings().removeClass('active');
+    });
+  }
+
+  /**
+   * @desc 视频卡区域 标签 点击事件
+   */
+  function handleTagActive() {
+    $(document).on('click', '.swiperContianer_02 .swiper-wrapper .swiper-slide', function () {
+      $(this).addClass('current').siblings().removeClass('current');
+    });
+  }
+</script>
+</body>
+</html>
